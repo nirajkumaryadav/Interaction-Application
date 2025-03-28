@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Interaction Application
 
 A real-time video interaction application built with MERN stack (MongoDB, Express, React, Node.js) and Socket.IO.
@@ -87,6 +88,9 @@ ISC
 Niraj Kumar Yadav - [GitHub](https://github.com/nirajkumaryadav)
 
 Project Link: [https://github.com/nirajkumaryadav/Interaction-Application](https://github.com/nirajkumaryadav/Interaction-Application)
+=======
+# Interaction-Application
+>>>>>>> 7bdccbd0a5803c321d5779a8867dbf9fd6a05f91
 =======
 # Interaction-Application
 >>>>>>> 7bdccbd0a5803c321d5779a8867dbf9fd6a05f91
