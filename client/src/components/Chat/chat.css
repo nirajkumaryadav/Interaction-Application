@@ -1,0 +1,69 @@
+/* Improved message container styling */
+.message-container {
+  position: relative;
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+/* Delete icon styling */
+.delete-icon {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  margin: 0 5px;
+}
+
+.message-container:hover .delete-icon {
+  opacity: 1;
+}
+
+/* Specific positioning for sent and received messages */
+.message-container.sent {
+  flex-direction: row-reverse;
+}
+
+.message-container.received {
+  flex-direction: row;
+}
+
+/* Message bubble styling */
+.rec, .sen {
+  border-radius: 12px;
+  padding: 8px 12px;
+  max-width: 70%;
+  word-wrap: break-word;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.rec {
+  background-color: #8fa5e9;
+  margin-right: 8px;
+}
+
+.sen {
+  background-color: #f0f2f5;
+  margin-left: 8px;
+}
+
+/* Message metadata styling */
+.message-metadata {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.message-sender {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-right: 8px;
+}
+
+.message-timestamp {
+  font-size: 10px;
+  color: #888;
+}
+
+/* File attachment styling */
+.file-attachment {
+  margin-top: 5px;
+}
