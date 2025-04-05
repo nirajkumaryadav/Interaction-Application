@@ -3,5 +3,8 @@
     { "source": "/(.*)", "destination": "/index.html" }
   ],
   "buildCommand": "CI=false npm run build",
-  "outputDirectory": "build"
+  "outputDirectory": "build",
+  "env": {
+    "REACT_APP_API_URL": "https://interaction-application-server.vercel.app"
+  }
 }

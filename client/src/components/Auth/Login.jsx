@@ -64,7 +64,7 @@ const Login = ({ onLoginSuccess }) => {
                     </p>
                     {isError && (
                       <div className="alert alert-danger">
-                        {error?.data?.message || "An error occurred"}
+                        {error?.data?.message || "Login failed. Please try again."}
                       </div>
                     )}
                     <form onSubmit={handleSubmit}>

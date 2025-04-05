@@ -63,7 +63,7 @@ const Register = ({ onRegisterSuccess }) => {
                     </p>
                     {isError && (
                       <div className="alert alert-danger">
-                        {error.data.message}
+                        {error?.data?.message || "Registration failed. Please try again."}
                       </div>
                     )}
                     {isSuccess ? (
