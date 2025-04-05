@@ -28,7 +28,7 @@ import GroupIcon from "@mui/icons-material/Group";
 import AddIcon from "@mui/icons-material/Add";
 import RefreshIcon from "@mui/icons-material/Refresh";
 import { toast } from "react-toastify";
-import "./rooms.css";
+import "./Rooms.css";
 import { useDispatch } from 'react-redux';
 import { api } from '../../redux/api';
 
