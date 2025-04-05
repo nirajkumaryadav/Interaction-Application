@@ -28,7 +28,7 @@ const app = express();
 app.use(express.json({ limit: "30mb", extended: true }));
 app.use(express.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors({ 
-  origin: process.env.FRONTEND_URL || 'http://localhost:3000',
+  origin: process.env.FRONTEND_URL || 'http://localhost:3000',  // Temporarily allow all origins for testing
   credentials: true 
 }));
 
@@ -67,7 +67,7 @@ mongoose
     const io = new Server(server, {
       cookie: false,
       cors: {
-        origin: process.env.FRONTEND_URL,
+        origin: process.env.FRONTEND_URL || 'http://localhost:3000',  // Temporarily allow all origins for testing
         methods: ["GET", "POST"],
         credentials: true,
       },

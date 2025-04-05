@@ -25,7 +25,7 @@ const Chat = ({ userId, name, room, prevMessages, roomId, roomHost }) => {
   const [playSent] = useSound(messageSent);
   const [playCall, { stop }] = useSound(call);
 
-  const ENDPOINT = process.env.REACT_APP_API_URL || "http://localhost:5000";
+  const ENDPOINT = "https://interaction-application-server.vercel.app";
   let socket = useRef(null);
   const navigate = useNavigate();
   const [postMessage] = usePostMessageMutation();
