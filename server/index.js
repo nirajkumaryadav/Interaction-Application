@@ -50,7 +50,7 @@ app.use((err, req, res, next) => {
 });
 
 const CONNECTION_URL = process.env.CONNECTION_URL;
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT;
 
 if (!process.env.CONNECTION_URL) {
   console.error("ERROR: CONNECTION_URL is not defined in environment variables");
