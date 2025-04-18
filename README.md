@@ -1,6 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 # Interaction Application
+
+## Live Demo
+**Check out the live application here: [https://interaction-application.onrender.com/](https://interaction-application.onrender.com/)**
 
 A real-time video interaction application built with MERN stack (MongoDB, Express, React, Node.js) and Socket.IO.
 
@@ -70,27 +71,3 @@ interaction-app/
 2. Create a new room or join an existing one
 3. Chat with other users in the room
 4. Start video calls with users in the same room
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## License
-
-ISC
-
-## Contact
-
-Niraj Kumar Yadav - [GitHub](https://github.com/nirajkumaryadav)
-
-Project Link: [https://github.com/nirajkumaryadav/Interaction-Application](https://github.com/nirajkumaryadav/Interaction-Application)
-=======
-# Interaction-Application
->>>>>>> 7bdccbd0a5803c321d5779a8867dbf9fd6a05f91
-=======
-# Interaction-Application
->>>>>>> 7bdccbd0a5803c321d5779a8867dbf9fd6a05f91
