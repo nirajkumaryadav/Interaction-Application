@@ -28,8 +28,7 @@ const app = express();
 app.use(express.json({ limit: "30mb", extended: true }));
 app.use(express.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors({ 
-  // Make sure there's no trailing slash here
-  origin: "https://interaction-application-5yb2.vercel.app",
+  origin: process.env.FRONTEND_URL || "*",
   credentials: true 
 }));
 
@@ -43,6 +42,18 @@ app.get("/", (req, res) => {
   res.send("API");
 });
 
+app.get("/health", (req, res) => {
+  res.status(200).json({
+    status: "ok",
+    db: mongoose.connection.readyState === 1 ? "connected" : "disconnected",
+    env: {
+      frontendUrl: process.env.FRONTEND_URL || "not set",
+      connectionUrl: process.env.CONNECTION_URL ? "set (hidden)" : "not set",
+      nodeEnv: process.env.NODE_ENV || "not set"
+    }
+  });
+});
+
 // Error handling middleware
 app.use((err, req, res, next) => {
   console.error(err.stack);
@@ -50,9 +61,9 @@ app.use((err, req, res, next) => {
 });
 
 const CONNECTION_URL = process.env.CONNECTION_URL;
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5000; // Add fallback port
 
-if (!process.env.CONNECTION_URL) {
+if (!CONNECTION_URL) {
   console.error("ERROR: CONNECTION_URL is not defined in environment variables");
   process.exit(1);
 }
@@ -68,7 +79,7 @@ mongoose
     const io = new Server(server, {
       cookie: false,
       cors: {
-        origin: "https://interaction-application-5yb2.vercel.app",
+        origin: process.env.FRONTEND_URL || "*",
         methods: ["GET", "POST"],
         credentials: true,
       },
@@ -122,7 +133,7 @@ mongoose
       });
     });
   })
-  .catch(() => {
-    console.error("MongoDB connection error");
+  .catch((error) => {
+    console.error("MongoDB connection error:", error.message); // Add error details
     process.exit(1);
   });
